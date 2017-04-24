@@ -5,7 +5,7 @@
 
   var VotingContract = web3.eth.contract(JSON.parse(abi));
   // use the address that was provided when creating the Voting contract on testrpc
-  var contractInstance = VotingContract.at('0xca8bab43d250f9128178f5750972d9061b508c2e');
+  var contractInstance = VotingContract.at('0xd2f2905ab75216b373d01dd5a89fd3e6ee4ed76a');
   var candidates = ['2B', '9S', 'A2'];
 
   // define totalVotesFor callback
