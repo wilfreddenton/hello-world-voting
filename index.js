@@ -5,7 +5,7 @@
 
   var VotingContract = web3.eth.contract(JSON.parse(abi));
   // use the address that was provided when creating the Voting contract on testrpc
-  var contractInstance = VotingContract.at('0xd2f2905ab75216b373d01dd5a89fd3e6ee4ed76a');
+  var contractInstance = VotingContract.at('0xc7a159c79420a3ff70283a276d72f634ff89625b');
   var candidates = ['2B', '9S', 'A2'];
 
   // define totalVotesFor callback
@@ -27,9 +27,9 @@
     });
   };
 
-  var voteButton = document.getElementById('vote');
+  var voteForm = document.getElementById('vote');
   var candidateInput = document.getElementById('candidate');
-  voteButton.addEventListener('click', function (e) {
+  voteForm.addEventListener('submit', function (e) {
     e.preventDefault();
     var candidate = candidateInput.value;
     if (candidate === '' || candidates.indexOf(candidate) < 0) {
